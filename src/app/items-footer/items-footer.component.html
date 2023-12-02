@@ -1,0 +1,38 @@
+<footer>
+  <!-- COUNTER -->
+  <div class="counter">
+    <span> {{ counter }} items left</span>
+  </div>
+
+  <!-- FILTER -->
+  <div class="filter">
+    <!-- all filter -->
+    <button
+      [ngClass]="selectedFilter === 'all' ? 'active' : ''"
+      (click)="setFilter('all')"
+    >
+      All
+    </button>
+
+    <!-- active filter -->
+    <button
+      [ngClass]="selectedFilter == 'active' ? 'active' : ''"
+      (click)="setFilter('active')"
+    >
+      Active
+    </button>
+
+    <!-- completed filter -->
+    <button
+      [ngClass]="selectedFilter == 'completed' ? 'active' : ''"
+      (click)="setFilter('completed')"
+    >
+      Completed
+    </button>
+  </div>
+
+  <!-- CLEAR ALL -->
+  <div class="clear">
+    <button (click)="clearCompleted()">Clear Completed</button>
+  </div>
+</footer>

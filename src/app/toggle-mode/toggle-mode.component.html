@@ -1,0 +1,18 @@
+<div class="toggle-wrapper">
+  <label class="toggle">
+    <input
+      type="checkbox"
+      class="toggle-input"
+      [checked]="mode == 'dark' ? true : false"
+      (change)="toggle()"
+    />
+    <img
+      src="../../assets/icon-moon.svg"
+      alt="moon svg"
+      *ngIf="mode == 'light'"
+    />
+    <img src="../../assets/icon-sun.svg" alt="sun svg" *ngIf="mode == 'dark'" />
+    <span class="toggler"></span>
+  </label>
+  <br />
+</div>

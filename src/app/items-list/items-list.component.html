@@ -1,0 +1,45 @@
+<main>
+  <!-- ADD NEW INPUT -->
+  <div class="add-new-div">
+    <input
+      type="text"
+      class="add-new-input"
+      placeholder="Create a new todo..."
+      [(ngModel)]="newItem"
+      (keyup.enter)="setItem()"
+    />
+  </div>
+
+  <!-- MAIN TODO LIST -->
+  <section class="items-list">
+    <!-- check if list is empty -->
+    <div class="empty" *ngIf="UiTodos.length == 0">
+      <p>Todos List currently is empty, start to add some...</p>
+    </div>
+
+    <!-- main list -->
+    <div class="item" *ngFor="let todo of UiTodos">
+      <label class="item-label">
+        <input
+          type="checkbox"
+          id="checkbox"
+          [(ngModel)]="todo.completed"
+          (change)="(todo.completed == !todo.completed)"
+        />
+        <p>{{ todo.title }}</p>
+        <span class="checkmark"></span>
+      </label>
+      <button class="remove" (click)="removeTodo(todo.id)">
+        <img src="../../assets/icon-cross.svg" alt="remove icon" />
+      </button>
+    </div>
+
+    <!-- footer -->
+    <app-items-footer
+      [counter]="counter"
+      (clear)="clearCompleted()"
+      (setF)="updateUI($event)"
+      style="width: 100%"
+    ></app-items-footer>
+  </section>
+</main>
