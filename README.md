@@ -1,7 +1,7 @@
 ### Links
 
 - Solution URL: [https://www.frontendmentor.io/solutions/todo-app-using-vue-3-8AZ8avWI7c]
-- Live Site URL: [https://todo-app-rose-seven.vercel.app/]
+- Live Site URL: [https://todo-angular-three.vercel.app/]
 
 ### The challenge
 
