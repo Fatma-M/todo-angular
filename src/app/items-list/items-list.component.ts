@@ -83,7 +83,6 @@ export class ItemsListComponent {
 
   // Clear completed todos
   clearCompleted() {
-    console.log('test');
     if (this.completedTodos.length === 0) {
       confirm('there is no completed Todos');
     } else if (confirm('Delete all completed Todos?')) {
